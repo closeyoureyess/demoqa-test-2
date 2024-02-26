@@ -1,6 +1,4 @@
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 public class JUnitExamples {
 
@@ -14,6 +12,16 @@ public class JUnitExamples {
     void BeforeEach() {
         //Конфигурация
         System.out.println("Here is beforeEach()");
+    }
+
+    @AfterAll
+    static void afterAll() {
+        System.out.println("Here is afterAll()");
+    }
+
+    @AfterEach
+    void afterEach() {
+        System.out.println("Here is afterEach");
     }
 
     @Test
